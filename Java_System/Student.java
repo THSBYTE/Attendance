@@ -4,8 +4,11 @@ public class Student{
     private String name;
     private int grade;
     private double timeAbsent;
-    //List<scanEvent> eventList = new LinkedList<scanEvent>();
-    
+    List<ScanEvent> eventList = new LinkedList<ScanEvent>();
+    public Student(String name, String ID){
+        setName(name);
+        setID(ID);
+    }
     //getter and setter methods
     public void setID(String ID){
         this.ID=ID;
@@ -22,7 +25,7 @@ public class Student{
     public void setGrade(int grade){
         this.grade=grade;
     }
-    public int getGrade(int grade){
+    public int getGrade(){
         return grade;
     }
     public void setTimeAbsent(double timeAbsent){
@@ -30,5 +33,8 @@ public class Student{
     }
     public double getTimeAbsent(){
         return timeAbsent;
+    }
+    public void addEvent(ScanEvent event){
+        eventList.add(event);
     }
 }
